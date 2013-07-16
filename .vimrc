@@ -6,6 +6,11 @@
     call vundle#rc()
 
     Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+    Bundle 'zeis/vim-kolor'
+    Bundle 'Valloric/YouCompleteMe'
+    Bundle 'kien/ctrlp.vim'
+    Bundle "myusuf3/numbers.vim"
+    Bundle "scrooloose/nerdcommenter"
 
 " General settings
     set encoding=utf-8
@@ -56,6 +61,10 @@
     set incsearch
     set hlsearch
     nnoremap <Leader><Space> :noh<CR>
+
+    "color
+    set background=dark
+    colorscheme kolor
 
 "Key remapping
     let mapleader="," " remapping leader key

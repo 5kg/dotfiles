@@ -20,8 +20,10 @@
     set mouse=a
     set undofile
     set hidden
+    set formatoptions=qrnj1
     au FocusLost * :wa
-    filetype plugin indent on
+    filetype plugin on
+    filetype indent on
 
     "ui
     syntax on
@@ -32,7 +34,7 @@
     set showcmd
     set showmode
     set cursorline
-    set colorcolumn=81
+    set colorcolumn=80
     set list
     set listchars=tab:▸\ ,trail:·,precedes:«,extends:»,eol:↲
     set wildmenu
@@ -51,6 +53,7 @@
     set shiftwidth=4
     set softtabstop=4
     set expandtab
+    set smarttab
 
     "searching
     nnoremap / /\v
@@ -67,7 +70,9 @@
     colorscheme kolor
 
 "Key remapping
-    let mapleader="," " remapping leader key
+    let mapleader=","
+
+    nnoremap ; :
 
     command W w
     command Wq wq
@@ -85,3 +90,9 @@
     nnoremap k gk
     nnoremap <silent> <Leader>W :let _sp=@/<Bar>:%s/\s\+$//<BAR>:let @/=_sp<CR>
     nnoremap <leader>v V`]
+
+    nnoremap <leader>w <C-w>v<C-w>l
+    nnoremap <C-h> <C-w>h
+    nnoremap <C-j> <C-w>j
+    nnoremap <C-k> <C-w>k
+    nnoremap <C-l> <C-w>l

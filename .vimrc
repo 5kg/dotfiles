@@ -11,6 +11,11 @@
     Bundle 'kien/ctrlp.vim'
     Bundle "myusuf3/numbers.vim"
     Bundle "scrooloose/nerdcommenter"
+    Bundle "scrooloose/syntastic"
+    Bundle "ciaranm/detectindent"
+    Bundle "rking/ag.vim"
+    Bundle "Lokaltog/vim-easymotion"
+    Bundle "scrooloose/nerdtree"
 
 " General settings
     set encoding=utf-8
@@ -54,6 +59,7 @@
     set softtabstop=4
     set expandtab
     set smarttab
+    autocmd BufReadPost * :DetectIndent
 
     "searching
     nnoremap / /\v
@@ -91,8 +97,10 @@
     nnoremap <silent> <Leader>W :let _sp=@/<Bar>:%s/\s\+$//<BAR>:let @/=_sp<CR>
     nnoremap <leader>v V`]
 
-    nnoremap <leader>w <C-w>v<C-w>l
+    nnoremap <Leader>w <C-w>v<C-w>l
     nnoremap <C-h> <C-w>h
     nnoremap <C-j> <C-w>j
     nnoremap <C-k> <C-w>k
     nnoremap <C-l> <C-w>l
+
+    map <Leader>t :NERDTreeToggle<CR>
